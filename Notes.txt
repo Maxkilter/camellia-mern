@@ -1,0 +1,7 @@
+ All request from front-end should be redirected on other port in dev mode:
+ Put the command "proxy": "http://localhost:5000" in client package.json file;
+
+ You need to parse requests to json format with the command in app.js file:
+ app.use(express.json({extended: true}));
+    and format body in useHttp hook with command JSON.stringify(body);
+    and add headers: headers['Content-Type'] ='application/json'
